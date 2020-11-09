@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <meta name="theme-color" content="#fafafa" />
+    <!-- fixes error on favicon request -> https://stackoverflow.com/questions/1321878/how-to-prevent-favicon-ico-requests -->
+    <link rel="icon" href="data:," />
     <!-- normalize.css -->
     <style>
       html {
