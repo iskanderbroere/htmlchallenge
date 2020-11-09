@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>@frontboys/html-challenge</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="theme-color" content="#fafafa" />
+    <!-- normalize.css -->
+    <style>
+      html {
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+      }
+      main {
+        display: block;
+      }
+      h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+      }
+      hr {
+        box-sizing: content-box;
+        height: 0;
+        overflow: visible;
+      }
+      pre {
+        font-family: monospace, monospace;
+        font-size: 1em;
+      }
+      a {
+        background-color: transparent;
+      }
+      abbr[title] {
+        border-bottom: none;
+        text-decoration: underline;
+        -webkit-text-decoration: underline dotted;
+        text-decoration: underline dotted;
+      }
+      b,
+      strong {
+        font-weight: bolder;
+      }
+      code,
+      kbd,
+      samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+      }
+      small {
+        font-size: 80%;
+      }
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+      sub {
+        bottom: -0.25em;
+      }
+      sup {
+        top: -0.5em;
+      }
+      img {
+        border-style: none;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+      }
+      button,
+      input {
+        overflow: visible;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      button,
+      [type="button"],
+      [type="reset"],
+      [type="submit"] {
+        -webkit-appearance: button;
+      }
+      button::-moz-focus-inner,
+      [type="button"]::-moz-focus-inner,
+      [type="reset"]::-moz-focus-inner,
+      [type="submit"]::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+      }
+      button:-moz-focusring,
+      [type="button"]:-moz-focusring,
+      [type="reset"]:-moz-focusring,
+      [type="submit"]:-moz-focusring {
+        outline: 1px dotted ButtonText;
+      }
+      fieldset {
+        padding: 0.35em 0.75em 0.625em;
+      }
+      legend {
+        box-sizing: border-box;
+        color: inherit;
+        display: table;
+        max-width: 100%;
+        padding: 0;
+        white-space: normal;
+      }
+      progress {
+        vertical-align: baseline;
+      }
+      textarea {
+        overflow: auto;
+      }
+      [type="checkbox"],
+      [type="radio"] {
+        box-sizing: border-box;
+        padding: 0;
+      }
+      [type="number"]::-webkit-inner-spin-button,
+      [type="number"]::-webkit-outer-spin-button {
+        height: auto;
+      }
+      [type="search"] {
+        -webkit-appearance: textfield;
+        outline-offset: -2px;
+      }
+      [type="search"]::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit;
+      }
+      details {
+        display: block;
+      }
+      summary {
+        display: list-item;
+      }
+      template {
+        display: none;
+      }
+      [hidden] {
+        display: none;
+      }
+      blockquote,
+      dl,
+      dd,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      hr,
+      figure,
+      p,
+      pre {
+        margin: 0;
+      }
+      button {
+        background-color: transparent;
+        background-image: none;
+      }
+      button:focus {
+        outline: 1px dotted;
+        outline: 5px auto -webkit-focus-ring-color;
+      }
+      fieldset {
+        margin: 0;
+        padding: 0;
+      }
+      ol,
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+          "Noto Color Emoji";
+        line-height: 1.5;
+      }
+      *,
+      ::before,
+      ::after {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        border-color: #e2e8f0;
+      }
+      hr {
+        border-top-width: 1px;
+      }
+      img {
+        border-style: solid;
+      }
+      textarea {
+        resize: vertical;
+      }
+      input:-ms-input-placeholder,
+      textarea:-ms-input-placeholder {
+        color: #a0aec0;
+      }
+      input::-ms-input-placeholder,
+      textarea::-ms-input-placeholder {
+        color: #a0aec0;
+      }
+      input::placeholder,
+      textarea::placeholder {
+        color: #a0aec0;
+      }
+      button,
+      [role="button"] {
+        cursor: pointer;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: inherit;
+        font-weight: inherit;
+      }
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+      }
+      pre,
+      code,
+      kbd,
+      samp {
+        font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+          monospace;
+      }
+      img,
+      svg,
+      video,
+      canvas,
+      audio,
+      iframe,
+      embed,
+      object {
+        display: block;
+        vertical-align: middle;
+      }
+      img,
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- scripts -->
+    <script type="module">
+      // #region preact + htm
+      var e,
+        n,
+        t,
+        _,
+        o,
+        r,
+        l = {},
+        u = [],
+        i = /acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i;
+      function c(e, n) {
+        for (var t in n) e[t] = n[t];
+        return e;
+      }
+      function s(e) {
+        var n = e.parentNode;
+        n && n.removeChild(e);
+      }
+      function h(e, n, t) {
+        var _,
+          o,
+          r,
+          l = arguments,
+          u = {};
+        for (r in n)
+          "key" == r ? (_ = n[r]) : "ref" == r ? (o = n[r]) : (u[r] = n[r]);
+        if (arguments.length > 3)
+          for (t = [t], r = 3; r < arguments.length; r++) t.push(l[r]);
+        if (
+          (null != t && (u.children = t),
+          "function" == typeof e && null != e.defaultProps)
+        )
+          for (r in e.defaultProps)
+            void 0 === u[r] && (u[r] = e.defaultProps[r]);
+        return a(e, u, _, o, null);
+      }
+      function a(n, t, _, o, r) {
+        var l = {
+          type: n,
+          props: t,
+          key: _,
+          ref: o,
+          __k: null,
+          __: null,
+          __b: 0,
+          __e: null,
+          __d: void 0,
+          __c: null,
+          __h: null,
+          constructor: void 0,
+          __v: r,
+        };
+        return null == r && (l.__v = l), null != e.vnode && e.vnode(l), l;
+      }
+      function p(e) {
+        return e.children;
+      }
+      function Component(e, n) {
+        (this.props = e), (this.context = n);
+      }
+      function d(e, n) {
+        if (null == n) return e.__ ? d(e.__, e.__.__k.indexOf(e) + 1) : null;
+        for (var t; n < e.__k.length; n++)
+          if (null != (t = e.__k[n]) && null != t.__e) return t.__e;
+        return "function" == typeof e.type ? d(e) : null;
+      }
+      function v(e) {
+        var n, t;
+        if (null != (e = e.__) && null != e.__c) {
+          for (e.__e = e.__c.base = null, n = 0; n < e.__k.length; n++)
+            if (null != (t = e.__k[n]) && null != t.__e) {
+              e.__e = e.__c.base = t.__e;
+              break;
+            }
+          return v(e);
+        }
+      }
+      function y(o) {
+        ((!o.__d && (o.__d = !0) && n.push(o) && !m.__r++) ||
+          _ !== e.debounceRendering) &&
+          ((_ = e.debounceRendering) || t)(m);
+      }
+      function m() {
+        for (var e; (m.__r = n.length); )
+          (e = n.sort(function (e, n) {
+            return e.__v.__b - n.__v.__b;
+          })),
+            (n = []),
+            e.some(function (e) {
+              var n, t, _, o, r, l, u;
+              e.__d &&
+                ((l = (r = (n = e).__v).__e),
+                (u = n.__P) &&
+                  ((t = []),
+                  ((_ = c({}, r)).__v = _),
+                  (o = S(
+                    u,
+                    r,
+                    _,
+                    n.__n,
+                    void 0 !== u.ownerSVGElement,
+                    null != r.__h ? [l] : null,
+                    t,
+                    null == l ? d(r) : l,
+                    r.__h
+                  )),
+                  E(t, r),
+                  o != l && v(r)));
+            });
+      }
+      function g(e, n, t, _, o, r, i, c, f, h) {
+        var v,
+          y,
+          m,
+          g,
+          b,
+          x,
+          C,
+          w = (_ && _.__k) || u,
+          H = w.length;
+        for (
+          f == l && (f = null != i ? i[0] : H ? d(_, 0) : null),
+            t.__k = [],
+            v = 0;
+          v < n.length;
+          v++
+        )
+          if (
+            null !=
+            (g = t.__k[v] =
+              null == (g = n[v]) || "boolean" == typeof g
+                ? null
+                : "string" == typeof g || "number" == typeof g
+                ? a(null, g, null, null, g)
+                : Array.isArray(g)
+                ? a(p, { children: g }, null, null, null)
+                : null != g.__e || null != g.__c
+                ? a(g.type, g.props, g.key, null, g.__v)
+                : g)
+          ) {
+            if (
+              ((g.__ = t),
+              (g.__b = t.__b + 1),
+              null === (m = w[v]) || (m && g.key == m.key && g.type === m.type))
+            )
+              w[v] = void 0;
+            else
+              for (y = 0; y < H; y++) {
+                if ((m = w[y]) && g.key == m.key && g.type === m.type) {
+                  w[y] = void 0;
+                  break;
+                }
+                m = null;
+              }
+            (b = S(e, g, (m = m || l), o, r, i, c, f, h)),
+              (y = g.ref) &&
+                m.ref != y &&
+                (C || (C = []),
+                m.ref && C.push(m.ref, null, g),
+                C.push(y, g.__c || b, g)),
+              null != b
+                ? (null == x && (x = b),
+                  (f = k(e, g, m, w, i, b, f)),
+                  h || "option" != t.type
+                    ? "function" == typeof t.type && (t.__d = f)
+                    : (e.value = ""))
+                : f && m.__e == f && f.parentNode != e && (f = d(m));
+          }
+        if (((t.__e = x), null != i && "function" != typeof t.type))
+          for (v = i.length; v--; ) null != i[v] && s(i[v]);
+        for (v = H; v--; ) null != w[v] && D(w[v], w[v]);
+        if (C) for (v = 0; v < C.length; v++) A(C[v], C[++v], C[++v]);
+      }
+      function k(e, n, t, _, o, r, l) {
+        var u, i, c;
+        if (void 0 !== n.__d) (u = n.__d), (n.__d = void 0);
+        else if (o == t || r != l || null == r.parentNode)
+          e: if (null == l || l.parentNode !== e) e.appendChild(r), (u = null);
+          else {
+            for (i = l, c = 0; (i = i.nextSibling) && c < _.length; c += 2)
+              if (i == r) break e;
+            e.insertBefore(r, l), (u = l);
+          }
+        return void 0 !== u ? u : r.nextSibling;
+      }
+      function b(e, n, t) {
+        "-" === n[0]
+          ? e.setProperty(n, t)
+          : (e[n] =
+              null == t
+                ? ""
+                : "number" != typeof t || i.test(n)
+                ? t
+                : t + "px");
+      }
+      function x(e, n, t, _, o) {
+        var r, l, u;
+        if ((o && "className" == n && (n = "class"), "style" === n))
+          if ("string" == typeof t) e.style.cssText = t;
+          else {
+            if (("string" == typeof _ && (e.style.cssText = _ = ""), _))
+              for (n in _) (t && n in t) || b(e.style, n, "");
+            if (t) for (n in t) (_ && t[n] === _[n]) || b(e.style, n, t[n]);
+          }
+        else
+          "o" === n[0] && "n" === n[1]
+            ? ((r = n !== (n = n.replace(/Capture$/, ""))),
+              (l = n.toLowerCase()) in e && (n = l),
+              (n = n.slice(2)),
+              e.l || (e.l = {}),
+              (e.l[n + r] = t),
+              (u = r ? w : C),
+              t
+                ? _ || e.addEventListener(n, u, r)
+                : e.removeEventListener(n, u, r))
+            : "list" !== n &&
+              "tagName" !== n &&
+              "form" !== n &&
+              "type" !== n &&
+              "size" !== n &&
+              "download" !== n &&
+              "href" !== n &&
+              !o &&
+              n in e
+            ? (e[n] = null == t ? "" : t)
+            : "function" != typeof t &&
+              "dangerouslySetInnerHTML" !== n &&
+              (n !== (n = n.replace(/xlink:?/, ""))
+                ? null == t || !1 === t
+                  ? e.removeAttributeNS(
+                      "http://www.w3.org/1999/xlink",
+                      n.toLowerCase()
+                    )
+                  : e.setAttributeNS(
+                      "http://www.w3.org/1999/xlink",
+                      n.toLowerCase(),
+                      t
+                    )
+                : null == t || (!1 === t && !/^ar/.test(n))
+                ? e.removeAttribute(n)
+                : e.setAttribute(n, t));
+      }
+      function C(n) {
+        this.l[n.type + !1](e.event ? e.event(n) : n);
+      }
+      function w(n) {
+        this.l[n.type + !0](e.event ? e.event(n) : n);
+      }
+      function H(e, n, t) {
+        var _, o;
+        for (_ = 0; _ < e.__k.length; _++)
+          (o = e.__k[_]) &&
+            ((o.__ = e),
+            o.__e &&
+              ("function" == typeof o.type && o.__k.length > 1 && H(o, n, t),
+              (n = k(t, o, o, e.__k, null, o.__e, n)),
+              "function" == typeof e.type && (e.__d = n)));
+      }
+      function S(n, t, _, o, r, l, u, i, s) {
+        var f,
+          a,
+          d,
+          v,
+          y,
+          m,
+          k,
+          b,
+          x,
+          C,
+          w,
+          S = t.type;
+        if (void 0 !== t.constructor) return null;
+        null != _.__h &&
+          ((s = _.__h), (i = t.__e = _.__e), (t.__h = null), (l = [i])),
+          (f = e.__b) && f(t);
+        try {
+          e: if ("function" == typeof S) {
+            if (
+              ((b = t.props),
+              (x = (f = S.contextType) && o[f.__c]),
+              (C = f ? (x ? x.props.value : f.__) : o),
+              _.__c
+                ? (k = (a = t.__c = _.__c).__ = a.__E)
+                : ("prototype" in S && S.prototype.render
+                    ? (t.__c = a = new S(b, C))
+                    : ((t.__c = a = new Component(b, C)),
+                      (a.constructor = S),
+                      (a.render = T)),
+                  x && x.sub(a),
+                  (a.props = b),
+                  a.state || (a.state = {}),
+                  (a.context = C),
+                  (a.__n = o),
+                  (d = a.__d = !0),
+                  (a.__h = [])),
+              null == a.__s && (a.__s = a.state),
+              null != S.getDerivedStateFromProps &&
+                (a.__s == a.state && (a.__s = c({}, a.__s)),
+                c(a.__s, S.getDerivedStateFromProps(b, a.__s))),
+              (v = a.props),
+              (y = a.state),
+              d)
+            )
+              null == S.getDerivedStateFromProps &&
+                null != a.componentWillMount &&
+                a.componentWillMount(),
+                null != a.componentDidMount && a.__h.push(a.componentDidMount);
+            else {
+              if (
+                (null == S.getDerivedStateFromProps &&
+                  b !== v &&
+                  null != a.componentWillReceiveProps &&
+                  a.componentWillReceiveProps(b, C),
+                (!a.__e &&
+                  null != a.shouldComponentUpdate &&
+                  !1 === a.shouldComponentUpdate(b, a.__s, C)) ||
+                  t.__v === _.__v)
+              ) {
+                (a.props = b),
+                  (a.state = a.__s),
+                  t.__v !== _.__v && (a.__d = !1),
+                  (a.__v = t),
+                  (t.__e = _.__e),
+                  (t.__k = _.__k),
+                  a.__h.length && u.push(a),
+                  H(t, i, n);
+                break e;
+              }
+              null != a.componentWillUpdate &&
+                a.componentWillUpdate(b, a.__s, C),
+                null != a.componentDidUpdate &&
+                  a.__h.push(function () {
+                    a.componentDidUpdate(v, y, m);
+                  });
+            }
+            (a.context = C),
+              (a.props = b),
+              (a.state = a.__s),
+              (f = e.__r) && f(t),
+              (a.__d = !1),
+              (a.__v = t),
+              (a.__P = n),
+              (f = a.render(a.props, a.state, a.context)),
+              (a.state = a.__s),
+              null != a.getChildContext &&
+                (o = c(c({}, o), a.getChildContext())),
+              d ||
+                null == a.getSnapshotBeforeUpdate ||
+                (m = a.getSnapshotBeforeUpdate(v, y)),
+              (w =
+                null != f && f.type == p && null == f.key
+                  ? f.props.children
+                  : f),
+              g(n, Array.isArray(w) ? w : [w], t, _, o, r, l, u, i, s),
+              (a.base = t.__e),
+              (t.__h = null),
+              a.__h.length && u.push(a),
+              k && (a.__E = a.__ = null),
+              (a.__e = !1);
+          } else
+            null == l && t.__v === _.__v
+              ? ((t.__k = _.__k), (t.__e = _.__e))
+              : (t.__e = P(_.__e, t, _, o, r, l, u, s));
+          (f = e.diffed) && f(t);
+        } catch (n) {
+          (t.__v = null),
+            (s || null != l) &&
+              ((t.__e = i), (t.__h = !!s), (l[l.indexOf(i)] = null)),
+            e.__e(n, t, _);
+        }
+        return t.__e;
+      }
+      function E(n, t) {
+        e.__c && e.__c(t, n),
+          n.some(function (t) {
+            try {
+              (n = t.__h),
+                (t.__h = []),
+                n.some(function (e) {
+                  e.call(t);
+                });
+            } catch (n) {
+              e.__e(n, t.__v);
+            }
+          });
+      }
+      function P(e, n, t, _, o, r, i, c) {
+        var s,
+          f,
+          a,
+          p,
+          h,
+          d = t.props,
+          v = n.props;
+        if (((o = "svg" === n.type || o), null != r))
+          for (s = 0; s < r.length; s++)
+            if (
+              null != (f = r[s]) &&
+              ((null === n.type ? 3 === f.nodeType : f.localName === n.type) ||
+                e == f)
+            ) {
+              (e = f), (r[s] = null);
+              break;
+            }
+        if (null == e) {
+          if (null === n.type) return document.createTextNode(v);
+          (e = o
+            ? document.createElementNS("http://www.w3.org/2000/svg", n.type)
+            : document.createElement(n.type, v.is && { is: v.is })),
+            (r = null),
+            (c = !1);
+        }
+        if (null === n.type) d === v || (c && e.data === v) || (e.data = v);
+        else {
+          if (
+            (null != r && (r = u.slice.call(e.childNodes)),
+            (a = (d = t.props || l).dangerouslySetInnerHTML),
+            (p = v.dangerouslySetInnerHTML),
+            !c)
+          ) {
+            if (null != r)
+              for (d = {}, h = 0; h < e.attributes.length; h++)
+                d[e.attributes[h].name] = e.attributes[h].value;
+            (p || a) &&
+              ((p &&
+                ((a && p.__html == a.__html) || p.__html === e.innerHTML)) ||
+                (e.innerHTML = (p && p.__html) || ""));
+          }
+          (function (e, n, t, _, o) {
+            var r;
+            for (r in t)
+              "children" === r ||
+                "key" === r ||
+                r in n ||
+                x(e, r, null, t[r], _);
+            for (r in n)
+              (o && "function" != typeof n[r]) ||
+                "children" === r ||
+                "key" === r ||
+                "value" === r ||
+                "checked" === r ||
+                t[r] === n[r] ||
+                x(e, r, n[r], t[r], _);
+          })(e, v, d, o, c),
+            p
+              ? (n.__k = [])
+              : ((s = n.props.children),
+                g(
+                  e,
+                  Array.isArray(s) ? s : [s],
+                  n,
+                  t,
+                  _,
+                  "foreignObject" !== n.type && o,
+                  r,
+                  i,
+                  l,
+                  c
+                )),
+            c ||
+              ("value" in v &&
+                void 0 !== (s = v.value) &&
+                (s !== e.value || ("progress" === n.type && !s)) &&
+                x(e, "value", s, d.value, !1),
+              "checked" in v &&
+                void 0 !== (s = v.checked) &&
+                s !== e.checked &&
+                x(e, "checked", s, d.checked, !1));
+        }
+        return e;
+      }
+      function A(n, t, _) {
+        try {
+          "function" == typeof n ? n(t) : (n.current = t);
+        } catch (n) {
+          e.__e(n, _);
+        }
+      }
+      function D(n, t, _) {
+        var o, r, l;
+        if (
+          (e.unmount && e.unmount(n),
+          (o = n.ref) && ((o.current && o.current !== n.__e) || A(o, null, t)),
+          _ || "function" == typeof n.type || (_ = null != (r = n.__e)),
+          (n.__e = n.__d = void 0),
+          null != (o = n.__c))
+        ) {
+          if (o.componentWillUnmount)
+            try {
+              o.componentWillUnmount();
+            } catch (n) {
+              e.__e(n, t);
+            }
+          o.base = o.__P = null;
+        }
+        if ((o = n.__k)) for (l = 0; l < o.length; l++) o[l] && D(o[l], t, _);
+        null != r && s(r);
+      }
+      function T(e, n, t) {
+        return this.constructor(e, t);
+      }
+      function render(n, t, _) {
+        var r, i, c;
+        e.__ && e.__(n, t),
+          (i = (r = _ === o) ? null : (_ && _.__k) || t.__k),
+          (n = h(p, null, [n])),
+          (c = []),
+          S(
+            t,
+            ((r ? t : _ || t).__k = n),
+            i || l,
+            l,
+            void 0 !== t.ownerSVGElement,
+            _ && !r
+              ? [_]
+              : i
+              ? null
+              : t.childNodes.length
+              ? u.slice.call(t.childNodes)
+              : null,
+            c,
+            _ || l,
+            r
+          ),
+          E(c, n);
+      }
+      function createContext(e, n) {
+        var t = {
+          __c: (n = "__cC" + r++),
+          __: e,
+          Consumer: function (e, n) {
+            return e.children(n);
+          },
+          Provider: function (e, t, _) {
+            return (
+              this.getChildContext ||
+                ((t = []),
+                ((_ = {})[n] = this),
+                (this.getChildContext = function () {
+                  return _;
+                }),
+                (this.shouldComponentUpdate = function (e) {
+                  this.props.value !== e.value && t.some(y);
+                }),
+                (this.sub = function (e) {
+                  t.push(e);
+                  var n = e.componentWillUnmount;
+                  e.componentWillUnmount = function () {
+                    t.splice(t.indexOf(e), 1), n && n.call(e);
+                  };
+                })),
+              e.children
+            );
+          },
+        };
+        return (t.Provider.__ = t.Consumer.contextType = t);
+      }
+      (e = {
+        __e: function (e, n) {
+          for (var t, _, o, r = n.__h; (n = n.__); )
+            if ((t = n.__c) && !t.__)
+              try {
+                if (
+                  ((_ = t.constructor) &&
+                    null != _.getDerivedStateFromError &&
+                    (t.setState(_.getDerivedStateFromError(e)), (o = t.__d)),
+                  null != t.componentDidCatch &&
+                    (t.componentDidCatch(e), (o = t.__d)),
+                  o)
+                )
+                  return (n.__h = r), (t.__E = t);
+              } catch (n) {
+                e = n;
+              }
+          throw e;
+        },
+      }),
+        (Component.prototype.setState = function (e, n) {
+          var t;
+          (t =
+            null != this.__s && this.__s !== this.state
+              ? this.__s
+              : (this.__s = c({}, this.state))),
+            "function" == typeof e && (e = e(c({}, t), this.props)),
+            e && c(t, e),
+            null != e && this.__v && (n && this.__h.push(n), y(this));
+        }),
+        (Component.prototype.forceUpdate = function (e) {
+          this.__v && ((this.__e = !0), e && this.__h.push(e), y(this));
+        }),
+        (Component.prototype.render = p),
+        (n = []),
+        (t =
+          "function" == typeof Promise
+            ? Promise.prototype.then.bind(Promise.resolve())
+            : setTimeout),
+        (m.__r = 0),
+        (o = l),
+        (r = 0);
+      var M,
+        F,
+        L,
+        W = 0,
+        R = [],
+        O = e.__r,
+        V = e.diffed,
+        q = e.__c,
+        I = e.unmount;
+      function B(n, t) {
+        e.__h && e.__h(F, n, W || t), (W = 0);
+        var _ = F.__H || (F.__H = { __: [], __h: [] });
+        return n >= _.__.length && _.__.push({}), _.__[n];
+      }
+      function useState(e) {
+        return (W = 1), useReducer(re, e);
+      }
+      function useReducer(e, n, t) {
+        var _ = B(M++, 2);
+        return (
+          (_.t = e),
+          _.__c ||
+            ((_.__ = [
+              t ? t(n) : re(void 0, n),
+              function (e) {
+                var n = _.t(_.__[0], e);
+                _.__[0] !== n && ((_.__ = [n, _.__[1]]), _.__c.setState({}));
+              },
+            ]),
+            (_.__c = F)),
+          _.__
+        );
+      }
+      function useEffect(n, t) {
+        var _ = B(M++, 3);
+        !e.__s && oe(_.__H, t) && ((_.__ = n), (_.__H = t), F.__H.__h.push(_));
+      }
+      function useLayoutEffect(n, t) {
+        var _ = B(M++, 4);
+        !e.__s && oe(_.__H, t) && ((_.__ = n), (_.__H = t), F.__h.push(_));
+      }
+      function useRef(e) {
+        return (
+          (W = 5),
+          useMemo(function () {
+            return { current: e };
+          }, [])
+        );
+      }
+      function useImperativeHandle(e, n, t) {
+        (W = 6),
+          useLayoutEffect(
+            function () {
+              "function" == typeof e ? e(n()) : e && (e.current = n());
+            },
+            null == t ? t : t.concat(e)
+          );
+      }
+      function useMemo(e, n) {
+        var t = B(M++, 7);
+        return oe(t.__H, n) && ((t.__ = e()), (t.__H = n), (t.__h = e)), t.__;
+      }
+      function useCallback(e, n) {
+        return (
+          (W = 8),
+          useMemo(function () {
+            return e;
+          }, n)
+        );
+      }
+      function useContext(e) {
+        var n = F.context[e.__c],
+          t = B(M++, 9);
+        return (
+          (t.__c = e),
+          n ? (null == t.__ && ((t.__ = !0), n.sub(F)), n.props.value) : e.__
+        );
+      }
+      function useDebugValue(n, t) {
+        e.useDebugValue && e.useDebugValue(t ? t(n) : n);
+      }
+      function ee() {
+        R.forEach(function (n) {
+          if (n.__P)
+            try {
+              n.__H.__h.forEach(te), n.__H.__h.forEach(_e), (n.__H.__h = []);
+            } catch (t) {
+              (n.__H.__h = []), e.__e(t, n.__v);
+            }
+        }),
+          (R = []);
+      }
+      (e.__r = function (e) {
+        O && O(e), (M = 0);
+        var n = (F = e.__c).__H;
+        n && (n.__h.forEach(te), n.__h.forEach(_e), (n.__h = []));
+      }),
+        (e.diffed = function (n) {
+          V && V(n);
+          var t = n.__c;
+          t &&
+            t.__H &&
+            t.__H.__h.length &&
+            ((1 !== R.push(t) && L === e.requestAnimationFrame) ||
+              (
+                (L = e.requestAnimationFrame) ||
+                function (e) {
+                  var n,
+                    t = function () {
+                      clearTimeout(_),
+                        ne && cancelAnimationFrame(n),
+                        setTimeout(e);
+                    },
+                    _ = setTimeout(t, 100);
+                  ne && (n = requestAnimationFrame(t));
+                }
+              )(ee));
+        }),
+        (e.__c = function (n, t) {
+          t.some(function (n) {
+            try {
+              n.__h.forEach(te),
+                (n.__h = n.__h.filter(function (e) {
+                  return !e.__ || _e(e);
+                }));
+            } catch (_) {
+              t.some(function (e) {
+                e.__h && (e.__h = []);
+              }),
+                (t = []),
+                e.__e(_, n.__v);
+            }
+          }),
+            q && q(n, t);
+        }),
+        (e.unmount = function (n) {
+          I && I(n);
+          var t = n.__c;
+          if (t && t.__H)
+            try {
+              t.__H.__.forEach(te);
+            } catch (n) {
+              e.__e(n, t.__v);
+            }
+        });
+      var ne = "function" == typeof requestAnimationFrame;
+      function te(e) {
+        "function" == typeof e.__c && e.__c();
+      }
+      function _e(e) {
+        e.__c = e.__();
+      }
+      function oe(e, n) {
+        return (
+          !e ||
+          e.length !== n.length ||
+          n.some(function (n, t) {
+            return n !== e[t];
+          })
+        );
+      }
+      function re(e, n) {
+        return "function" == typeof n ? n(e) : n;
+      }
+      var le = function (e, n, t, _) {
+          var o;
+          n[0] = 0;
+          for (var r = 1; r < n.length; r++) {
+            var l = n[r++],
+              u = n[r] ? ((n[0] |= l ? 1 : 2), t[n[r++]]) : n[++r];
+            3 === l
+              ? (_[0] = u)
+              : 4 === l
+              ? (_[1] = Object.assign(_[1] || {}, u))
+              : 5 === l
+              ? ((_[1] = _[1] || {})[n[++r]] = u)
+              : 6 === l
+              ? (_[1][n[++r]] += u + "")
+              : l
+              ? ((o = e.apply(u, le(e, u, t, ["", null]))),
+                _.push(o),
+                u[0] ? (n[0] |= 2) : ((n[r - 2] = 0), (n[r] = o)))
+              : _.push(u);
+          }
+          return _;
+        },
+        ue = new Map(),
+        html = function (e) {
+          var n = ue.get(this);
+          return (
+            n || ((n = new Map()), ue.set(this, n)),
+            (n = le(
+              this,
+              n.get(e) ||
+                (n.set(
+                  e,
+                  (n = (function (e) {
+                    for (
+                      var n,
+                        t,
+                        _ = 1,
+                        o = "",
+                        r = "",
+                        l = [0],
+                        u = function (e) {
+                          1 === _ &&
+                          (e || (o = o.replace(/^\s*\n\s*|\s*\n\s*$/g, "")))
+                            ? l.push(0, e, o)
+                            : 3 === _ && (e || o)
+                            ? (l.push(3, e, o), (_ = 2))
+                            : 2 === _ && "..." === o && e
+                            ? l.push(4, e, 0)
+                            : 2 === _ && o && !e
+                            ? l.push(5, 0, !0, o)
+                            : _ >= 5 &&
+                              ((o || (!e && 5 === _)) &&
+                                (l.push(_, 0, o, t), (_ = 6)),
+                              e && (l.push(_, e, 0, t), (_ = 6))),
+                            (o = "");
+                        },
+                        i = 0;
+                      i < e.length;
+                      i++
+                    ) {
+                      i && (1 === _ && u(), u(i));
+                      for (var c = 0; c < e[i].length; c++)
+                        (n = e[i][c]),
+                          1 === _
+                            ? "<" === n
+                              ? (u(), (l = [l]), (_ = 3))
+                              : (o += n)
+                            : 4 === _
+                            ? "--" === o && ">" === n
+                              ? ((_ = 1), (o = ""))
+                              : (o = n + o[0])
+                            : r
+                            ? n === r
+                              ? (r = "")
+                              : (o += n)
+                            : '"' === n || "'" === n
+                            ? (r = n)
+                            : ">" === n
+                            ? (u(), (_ = 1))
+                            : _ &&
+                              ("=" === n
+                                ? ((_ = 5), (t = o), (o = ""))
+                                : "/" === n && (_ < 5 || ">" === e[i][c + 1])
+                                ? (u(),
+                                  3 === _ && (l = l[0]),
+                                  (_ = l),
+                                  (l = l[0]).push(2, 0, _),
+                                  (_ = 0))
+                                : " " === n ||
+                                  "\t" === n ||
+                                  "\n" === n ||
+                                  "\r" === n
+                                ? (u(), (_ = 2))
+                                : (o += n)),
+                          3 === _ && "!--" === o && ((_ = 4), (l = l[0]));
+                    }
+                    return u(), l;
+                  })(e))
+                ),
+                n),
+              arguments,
+              []
+            )).length > 1
+              ? n
+              : n[0]
+          );
+        }.bind(h);
+      // #endregion preact + html
+
+      function CoffeeCupSvg() {
+        return html`<svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          version="1.1"
+          x="0px"
+          y="0px"
+          viewBox="0 0 296.001 296.001"
+          style="enable-background:new 0 0 296.001 296.001;"
+          xmlSpace="preserve"
+        >
+          <g>
+            <path
+              d="M290.664,148.038c-5.78-10.667-15.653-18.438-27.799-21.882c-4.126-1.17-8.375-1.764-12.629-1.764   c-7.386,0-14.474,1.792-20.789,4.997c0.021-3.326,0.004-6.442-0.013-9.328c-0.01-1.766-0.02-3.454-0.02-5.061c0-4.418-3.582-8-8-8   H8.042c-4.418,0-8,3.582-8,8c0,1.606-0.01,3.295-0.02,5.061c-0.179,31.228-0.512,89.354,50.826,150.104   c1.521,1.798,3.756,2.836,6.11,2.836h115.539c2.355,0,4.59-1.038,6.11-2.836c4.799-5.678,9.145-11.334,13.083-16.946   c10.572-1.611,85.224-14.84,101.98-68.771C297.602,171.8,296.533,158.869,290.664,148.038z M60.71,257.001   c-43.783-53.478-44.84-103.064-44.703-134H213.45c0.137,30.935-0.92,80.522-44.703,134H60.71z M278.393,179.699   c-10.523,33.866-52.082,48.877-74.857,54.675c17.735-31.75,23.395-61.319,25.152-84.879c5.563-5.662,13.268-9.103,21.548-9.103   c2.778,0,5.559,0.39,8.264,1.156c7.962,2.258,14.389,7.27,18.097,14.112C280.449,162.77,281.07,171.082,278.393,179.699z"
+            />
+            <path
+              d="M72.729,82.001c0,4.418,3.582,8,8,8s8-3.582,8-8c0-2.462,0.414-3.341,1.238-5.094c1.166-2.477,2.762-5.868,2.762-11.907   c0-6.039-1.596-9.431-2.762-11.907c-0.824-1.753-1.238-2.632-1.238-5.094c0-2.461,0.414-3.341,1.238-5.093   c1.166-2.476,2.762-5.867,2.762-11.905c0-4.418-3.582-8-8-8s-8,3.582-8,8c0,2.461-0.414,3.341-1.238,5.093   c-1.166,2.476-2.762,5.867-2.762,11.905c0,6.038,1.596,9.43,2.762,11.906c0.824,1.753,1.238,2.632,1.238,5.095   c0,2.462-0.414,3.342-1.238,5.095C74.324,72.571,72.729,75.963,72.729,82.001z"
+            />
+            <path
+              d="M104.729,82.001c0,4.418,3.582,8,8,8s8-3.582,8-8c0-2.462,0.414-3.341,1.238-5.094c1.166-2.477,2.762-5.868,2.762-11.907   c0-6.039-1.596-9.431-2.762-11.907c-0.824-1.753-1.238-2.632-1.238-5.094c0-2.461,0.414-3.341,1.238-5.093   c1.166-2.476,2.762-5.867,2.762-11.905c0-4.418-3.582-8-8-8s-8,3.582-8,8c0,2.461-0.414,3.341-1.238,5.093   c-1.166,2.476-2.762,5.867-2.762,11.905c0,6.038,1.596,9.43,2.762,11.906c0.824,1.753,1.238,2.632,1.238,5.095   c0,2.462-0.414,3.342-1.238,5.095C106.324,72.571,104.729,75.963,104.729,82.001z"
+            />
+            <path
+              d="M136.729,82.001c0,4.418,3.582,8,8,8s8-3.582,8-8c0-2.462,0.414-3.341,1.238-5.094c1.166-2.477,2.762-5.868,2.762-11.907   c0-6.039-1.596-9.431-2.762-11.907c-0.824-1.753-1.238-2.632-1.238-5.094c0-2.461,0.414-3.341,1.238-5.093   c1.166-2.476,2.762-5.867,2.762-11.905c0-4.418-3.582-8-8-8s-8,3.582-8,8c0,2.461-0.414,3.341-1.238,5.093   c-1.166,2.476-2.762,5.867-2.762,11.905c0,6.038,1.596,9.43,2.762,11.906c0.824,1.753,1.238,2.632,1.238,5.095   c0,2.462-0.414,3.342-1.238,5.095C138.324,72.571,136.729,75.963,136.729,82.001z"
+            />
+          </g>
+        </svg>`;
+      }
+
+      function App() {
+        return html`<${CoffeeCupSvg} />`;
+      }
+
+      render(html`<${App} />`, document.body);
+    </script>
+    <!-- scripts end -->
+  </body>
+</html>
